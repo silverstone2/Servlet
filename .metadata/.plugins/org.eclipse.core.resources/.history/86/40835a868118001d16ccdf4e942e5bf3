@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index.html</title>
+<!-- bootstrap css 로딩 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class = "container">
+		<h1>인덱스 페이지 입니다</h1>
+		<ul>
+			<li><a href="play.html">놀러가기</a></li>
+			<li><a href="/Hello/play.html">놀러가기</a></li>
+			<li><a href="./play.html">놀러가기</a></li>
+			<li><a href="http://localhost:8888/Hello/play.html">놀러가기</a></li>
+			<li><a href="sub/study.html">공부하기</a></li>
+		</ul>
+		
+		<form action="/Hello/send" method="post">
+		<!-- 
+			/send가 순수요청경로
+			/send 요청을 처리할 객체가 필요하고 이 객체를 생성하기 위해서는 클래스가 필요하다
+			클래스는 톰캣이 요청한 양식대로 작성을 해야하나 특수한 목적의 클래스를 생성하기 위해서는 상속을 받거나 인터페이스를 활용해야한다.
+		 -->
+			<input type="text" name="msg" placeholder="서버에 메세지 입력"/>
+			<button type="submit">전송</button>
+		</form>
+	
+		<p>
+			김구라 이미지를 보고 싶으면 주소창에 <br>
+			http://localhost:8888/Hello/images/kim1.png <br>
+			을 입력해보세요.
+		</p>
+		<!--  웹 에서의 절대 경로로 이미지 로딩하기 -->
+		<img src="http://localhost:8888/Hello/images/kim1.png">
+		<!--  현재 위치를 기준으로 상대 경로로 이미지 로딩하기 -->
+		<img src="images/kim1.png">
+		<img src="./images/kim1.png">
+		<!-- 위의 두 코드는 같은 코드임 -->
+		<!-- Tomcat 서버가(현재 서버가) 서비스하는 서비스 중에서 절대 경로로 이미 로딩하기 -->
+		<img src="/Hello.images.kim1.png">
+	</div>
+</body>
+</html>
