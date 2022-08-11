@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index.html</title>
+<!-- bootstrap css 로딩 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class = "container">
+		<h1>인덱스 페이지 입니다</h1>
+		<ul>
+			<li><a href="play.html">놀러가기</a></li>
+			<li><a href="/Hello/play.html">놀러가기</a></li>
+			<li><a href="./play.html">놀러가기</a></li>
+			<li><a href="http://localhost:8888/Hello/play.html">놀러가기</a></li>
+		</ul>
+	
+		<p>
+			김구라 이미지를 보고 싶으면 주소창에 <br>
+			http://localhost:8888/Hello/images/kim1.png <br>
+			을 입력해보세요.
+		</p>
+		<!--  웹 에서의 절대 경로로 이미지 로딩하기 -->
+		<img src="http://localhost:8888/Hello/images/kim1.png">
+		<!--  현재 위치를 기준으로 상대 경로로 이미지 로딩하기 -->
+		<img src="images/kim1.png">
+		<img src="./images/kim1.png">
+		<!-- 위의 두 코드는 같은 코드임 -->
+		<!-- Tomcat 서버가(현재 서버가) 서비스하는 서비스 중에서 절대 경로로 이미 로딩하기 -->
+		<img src="/Hello.images.kim1.png">
+	</div>
+</body>
+</html>
