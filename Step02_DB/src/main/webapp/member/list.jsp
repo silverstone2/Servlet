@@ -16,6 +16,7 @@
 <head>
 <meta charset="UTF-8">
 <title>/member/list.jsp</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
 </head>
 <body>
 <div class="container">
@@ -27,6 +28,8 @@
 				<th>번호</th>
 				<th>이름</th>
 				<th>주소</th>
+				<th>수정</th>
+				<th>삭제</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -35,6 +38,12 @@
 					<td><%=tmp.getNum() %></td>
 					<td><%=tmp.getName() %></td>
 					<td><%=tmp.getAddr() %></td>
+					<td>
+						<a href="updateform.jsp?num=<%=tmp.getNum() %>">수정</a>
+						</td>
+					<td>
+						<a href="delete.jsp?num=<%=tmp.getNum() %>">삭제</a>
+					</td>
 				</tr>
 			<%} %>
 		</tbody>

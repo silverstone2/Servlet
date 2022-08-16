@@ -4,18 +4,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-
+	// post 방식 전송 파라미터 추출할 때 한글 깨짐 방지
 	request.setCharacterEncoding("utf-8");
-	MemberDao dao = MemberDao.getInstance();
 	
+	// 1. 폼 전송되는 name 과 addr 을 추출한다.
 	String name = request.getParameter("name");
 	String addr = request.getParameter("addr");
 
-	
+	// MemberDto 객체에 회원 정보를 담고
 	MemberDto dto = new MemberDto();
 	dto.setName(name);
 	dto.setAddr(addr);
 	
+	// 2. DB에 저장한다.
+	MemberDao dao = MemberDao.getInstance();
+	
+	// 3. MemberDao 객체를 이용해서 DB에 저장을 하고 성공여부를 리턴 받는다.
 	boolean isSuccess = dao.insert(dto);
 %>
 <!DOCTYPE html>

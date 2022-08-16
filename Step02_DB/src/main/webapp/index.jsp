@@ -4,13 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>index.jsp</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
 </head>
 <body>
 <div class = "container">
-	<h1>인덱스 페이지입니다.</h1>
+	<h1>목록 추가, 삭제, 수정, 불러오기</h1>
 	<ul>
 		<li><a href="member/list.jsp">회원 목록 보기</a></li>
+		<li><a href="todo/list.jsp">할일 목록 보기</a></li>
 	</ul>
 </div>
 </body>
