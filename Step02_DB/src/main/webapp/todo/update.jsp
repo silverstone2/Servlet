@@ -10,9 +10,10 @@
 	// 1. 수정할 회원 번호 읽어오기
 	int num = Integer.parseInt(request.getParameter("num"));
 	String content = request.getParameter("content");
-	String regdate = request.getParameter("regdate");
 	
-	TodoDto dto = new TodoDto(num, content, regdate);
+	TodoDto dto = new TodoDto();
+	dto.setNum(num);
+	dto.setContent(content);
 	// 2. DB에서 회원정보 수정
 	boolean isSuccess = TodoDao.getInstance().update(dto);
 %>
@@ -21,7 +22,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Update.jsp</title>
 </head>
 <body>
 	<%if(isSuccess){%>
@@ -32,7 +33,7 @@
 	<%}else {%>
 		<script>
 			alert("일정 수정 실패!");
-			location.href = 'updateform.jsp'	
+			location.href = 'updateform.jsp';	
 		</script>
 	<%} %>
 </body>

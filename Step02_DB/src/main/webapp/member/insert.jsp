@@ -27,18 +27,22 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 정보 추가</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </head>
 <body>
-	<%if(isSuccess){%>
-		<script>
-			alert("회원정보가 추가되었습니다.");
-			location.href = 'list.jsp';
-		</script>
-	<%}else {%>
-		<script>
-			alert("추가 실패!");
-			location.href = 'insertform.jsp'	
-		</script>
-	<%} %>
+	<div class="container mt-5">
+		<%if(isSuccess){%>
+			<p class="alert alert-success">
+				<strong><%=name %></strong> 의 정보를 추가했습니다.
+				<a class="alert-link" href="list.jsp">확인</a>
+			</p>
+		<%}else {%>
+			<p class="alert alert-danger">
+				회원 정보 추가 실패!
+				<a class="alert-link" href="insertform.jsp">다시 입력</a>
+			</p>
+		<%} %>
+	</div>
 </body>
 </html>

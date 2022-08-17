@@ -9,6 +9,7 @@
 
 	// 1.content와 date를 추출
 	String content = request.getParameter("content");
+	String regdate = request.getParameter("regdate");
 	
 	TodoDto dto = new TodoDto();
 	dto.setContent(content);
@@ -33,7 +34,7 @@
 	<%}else {%>
 		<script>
 			alert("일정 추가 실패!");
-			location.href = 'insertform.jsp'	
+			location.href = 'insertform.jsp';	
 		</script>
 	<%} %>
 </body>

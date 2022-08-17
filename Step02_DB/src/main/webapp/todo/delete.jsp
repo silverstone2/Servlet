@@ -27,7 +27,7 @@
 	<%}else {%>
 		<script>
 			alert("일정 삭제 실패!");
-			location.href = 'delete.jsp'	
+			location.href = 'delete.jsp';
 		</script>
 	<%} %>
 </body>

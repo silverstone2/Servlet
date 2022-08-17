@@ -1,6 +1,7 @@
 package test.todo.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -91,11 +92,12 @@ public class TodoDao {
 		int updateRowCount = 0;
 		try {
 			conn = new DbcpBean().getConn();
-			String sql = "UPDATE member"
+			String sql = "UPDATE todo"
 					+ " SET content=?"
 					+ " WHERE num=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, dto.getContent());
+			pstmt.setInt(2, dto.getNum());
 			updateRowCount = pstmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -122,13 +124,14 @@ public class TodoDao {
 		ResultSet rs = null;
 		try {
 			conn = new DbcpBean().getConn();
-			String sql = "SELECT content FROM todo"
+			String sql = "SELECT content, TO_CHAR(regdate,'YYYY.MM.DD HH24:MI') regdate"
+						+ " FROM todo"
 		               + " WHERE num=?";
 			
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, num);
 			rs = pstmt.executeQuery();
-			while (rs.next()) {
+			if (rs.next()) {
 				dto=new TodoDto();
 				dto.setNum(num);
 				dto.setContent(rs.getString("content"));
