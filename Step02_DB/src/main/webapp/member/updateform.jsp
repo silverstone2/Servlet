@@ -15,6 +15,8 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 정보 수정 폼</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </head>
 <body>
 	<div class="container">
@@ -22,8 +24,8 @@
 	   <form action="update.jsp" method="post">
 	      <input type="hidden" name="num" value="<%=dto.getNum()%>"/>
 	      <!-- input type="hidden"은 화면상에 보이지는 않지만 폼을 전송 -->
-	      <div>
-	         <label for="num">번호</label>
+	      <div class="mb-3">
+	         <label class="form-label" for="num">번호</label>
 	         <!-- 
 	         	번호는 primary key 로 사용이 되기 때문에 수정을 하지 않는다.
 	         	그래서 수정할 필요가 없기 때문에 disabled 로 설정한 것이다.
@@ -31,19 +33,20 @@
 	         	이런 이유 때문에 input type = "hidden"으로 수정할 회원의 번호가
 	         	폼 전송될때 같이 전송되도록 해 놓은 것이다.
 	          -->
-	         <input type="text" id="num" value="<%=dto.getNum()%>" disabled/>
+	         <input class="form-control" type="text" id="num" value="<%=dto.getNum()%>" disabled/>
 	      </div>
-	      <div>
-	         <label for="name">이름</label>
-	         <input type="text" name="name" id="name" value="<%=dto.getName()%>"/>
+	      <div class="mb-3">
+	         <label class="form-label" for="name">이름</label>
+	         <input class="form-control" type="text" name="name" id="name" value="<%=dto.getName()%>"/>
 	      </div>
-	      <div>
-	         <label for="addr">주소</label>
-	         <input type="text" name="addr" id="addr" value="<%=dto.getName()%>"/>
+	      <div class="mb-3">
+	         <label class="form-label" for="addr">주소</label>
+	         <input class="form-control" type="text" name="addr" id="addr" value="<%=dto.getName()%>"/>
 	      </div>
-	      <button type="submit">수정</button>
-	      <button type="reset">취소</button>
+	      <button class="btn btn-outline-primary btn-sm" type="submit">수정</button>
+	      <button class="btn btn-outline-primary btn-sm" type="reset">취소</button>
 	   </form>
 	</div>
+	<jsp:include page="/include/footer.jsp"></jsp:include>
 </body>
 </html>
