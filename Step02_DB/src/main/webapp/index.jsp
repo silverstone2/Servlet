@@ -30,6 +30,10 @@
       해결책은 jsp 페이지에서 context 경로가 필요하면 아래의 EL 을 이용해서 출력하면 된다.
     --%>
    <p>컨텍스트 경로(프로젝트명) : <strong>${pageContext.request.contextPath }</strong></p>
+   <p>컨텍스트 경로(프로젝트명) : <strong><%=request.getContextPath() %></strong></p>
+   <ul>
+		<li><a href="${pageContext.request.contextPath }/test/form.jsp">폼 테스트</a></li>
+   </ul>
    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
      <!-- 케러셀 하단의 표시바 -->
 		<div class="carousel-indicators">

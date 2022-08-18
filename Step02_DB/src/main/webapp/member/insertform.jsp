@@ -11,6 +11,18 @@
 </head>
 <body>
 <div class="container">
+	<nav class="mt-2">
+		<!-- 접속한 경로의 목록을 보여주는 기능 -->
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+		 		<a href="${pageContext.request.contextPath }/index.jsp">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+               <a href="${pageContext.request.contextPath }/member/list.jsp">회원목록</a>
+            </li>
+			<li class="breadcrumb-item active">회원 추가 페이지</li>
+		</ol>
+	</nav>
 	<h1>회원 추가 폼입니다</h1>
 	<form action="${pageContext.request.contextPath }/member/insert.jsp" method="post" class="row g-3">
 		<div class="mb-3">
