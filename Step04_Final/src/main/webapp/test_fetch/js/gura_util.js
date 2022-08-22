@@ -81,7 +81,6 @@
 			
 			let data=new FormData();
 			data.append(name, input.files[0]);
-			
 			promise=fetch(url,{
 				method:"post",
 				body:data
@@ -90,6 +89,8 @@
 			
 			//전송할 쿼리 문자열 구성
 			const data=name+"="+encodeURIComponent(input.value);
+			// 트구한 문자열을 인코딩을 해서 보내는 것, 직접 읽어낸 것을 인코딩을 해줘야한다.
+			// 하나의 덩어리로 넘어갈 수 있도록 해야함.
 			promise=fetch(url,{
 				method:"POST",
 				headers:{"Content-Type":"application/x-www-form-urlencoded; charset=utf-8"},

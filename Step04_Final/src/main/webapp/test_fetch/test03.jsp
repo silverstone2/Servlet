@@ -21,6 +21,7 @@
 	
 	<!-- 외부 javascript 로딩 -->
 	<script src="js/gura_util.js"></script>
+	<!-- 위의 gura_util.js는 제작한 util임 -->
 	<script>
 	
 		document.querySelector("#sendBtn2").addEventListener("click", ()=>{
