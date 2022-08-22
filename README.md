@@ -1,7 +1,7 @@
 # WebStudy
 ## 2022-08-11
 - local server 구동 및 Servlet
-a href="https://github.com/silverstone2/Web/tree/main/Hello"
+  File : https://github.com/silverstone2/Web/tree/main/Hello/src/main/webapp
 -----------------------------------------
 ## 2022-08-12
 - DB 연동
