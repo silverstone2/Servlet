@@ -16,6 +16,7 @@
 				<label class="control-label" for="id">아이디</label>
 				<input class="form-control" type="text" name="id" id="id"/>
 				<small class="form-text text-muted">영문자 소문자로 시작하고 5글자~10글자 이내로 입력하세요</small>
+				<!-- 정규표현식으로 표현하면 /^[a-z].{4,9}$/ -->
 				<div class="invalid-feedback">사용할 수 없는 아이디 입니다.</div>
 			</div>
 			<div class="mb-3">

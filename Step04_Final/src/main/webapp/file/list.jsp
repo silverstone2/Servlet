@@ -34,7 +34,7 @@
 	
 	//전체 페이지의 갯수 구하기
 	int totalPageCount=(int)Math.ceil(totalRow/(double)PAGE_ROW_COUNT);
-	//끝 페이지 번호가 이미 전체 페이지 갯수보다 크게 계산되었다면 잘못된 값이다.
+	//끝 페이지 번호가 이미 전체 페이지 갯수보다 크게 계산되었다면 잘못된 값이다. 올림을 통해서 페이지수를 늘려나감(소수점이 있으면 올림해버림)
 	if(endPageNum > totalPageCount){
 		endPageNum=totalPageCount; //보정해 준다. 
 	}
@@ -99,7 +99,9 @@
 		
 		<nav>
 			<ul class="pagination">
-				
+				<%--
+					startPageNum 이 1 이 아닌 경우에만 Prev 링크를 제공한다.
+				 --%>
 				<%if(startPageNum != 1){ %>
 					<li class="page-item">
 						<a class="page-link" href="list.jsp?pageNum=<%=startPageNum-1 %>">Prev</a>
@@ -117,7 +119,9 @@
 						</li>
 					<%} %>
 				<%} %>	
-				
+				<%--
+					마지막 페이지 번호가 전체 페이지의 갯수보다 작으면 Next 링크를 제공한다.
+				 --%>
 				<%if(endPageNum < totalPageCount){ %>
 					<li class="page-item">
 						<a class="page-link" href="list.jsp?pageNum=<%=endPageNum+1 %>">Next</a>
