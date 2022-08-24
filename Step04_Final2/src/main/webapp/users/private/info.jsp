@@ -63,7 +63,7 @@
 	</div>
 	<script>
 		function deleteConfirm(){
-			let isDelete=confirm("확인을 누르면 회원 탈퇴가 됩니다. 탈퇴 하시겠습니까?");
+			let isDelete=confirm("확인을 누르면 회원 탈퇴가 진행됩니다. 정말 탈퇴 하시겠습니까?");
 			if(isDelete){
 				location.href="delete.jsp";
 			}
