@@ -40,16 +40,11 @@
 	<%}else{ %>
 		<p>
 			아이디 혹은 비밀번호가 틀려요
-			<a href="${pageContext.request.contextPath }/users/loginform.jsp?url=<%=encodedUrl%>">다시시도</a>
+			<a href="${pageContext.request.contextPath }/users/loginform.jsp?url=<%=encodedUrl%>">다시 시도</a>
 		</p>
 	<%} %>
 </div>
 </body>
-
-
-
-
-
 </html>
 
 
