@@ -7,5 +7,6 @@
   <module moduleId="org.eclipse.jst.jee.server:Step02_DB" serverId="Tomcat v8.5 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Step01_Servlet" serverId="Tomcat v8.5 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Step04_Assignment" serverId="Tomcat v8.5 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:MySite" serverId="Tomcat v8.5 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Step04_Final" serverId="Tomcat v8.5 Server at localhost"/>
 </modules>
