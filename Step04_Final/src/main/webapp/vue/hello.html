@@ -14,6 +14,10 @@
 		<br />
 		<input type="text" v-model="msg"/>
 		<p>{{msg}}</p>
+		<!--
+			input요소에 입력한 값이 msg라는 모델명으로 관리함(입력한 것이 실시간으로 업데이트 됨) 모델이 수정되면 모델이 반영된 곳에는 자동 업데이트가 됨
+			Vue.js는 {{}}를 특별하게 해석함!
+		-->
 		<ul>
 			<li v-for="item in nums">{{item}}</li>
 		</ul>
@@ -29,15 +33,17 @@
 		});
 	</script>
 	
+	<!-- Vue.js 로딩하기 -->
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script>
 		// Vue 객체를 생성하면서 object 전달하기 
+		// 방은 총 3개 (el, data, methods) => Vue.js와 약속된 방의 이름
 		new Vue({
 			el:"#app",
 			data:{
 				fortune:"동쪽으로 가면 귀인을 만나요!",
 				myName:"김구라",
-				msg:"",
+				msg:"", //vue에서는 변수라기 보다는 모델이라고 부르는게 좋음
 				nums:[10, 20, 30]
 			},
 			methods:{

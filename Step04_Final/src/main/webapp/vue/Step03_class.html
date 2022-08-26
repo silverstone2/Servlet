@@ -14,6 +14,10 @@
         <br>
         <button class="btn"
             v-bind:class="{'btn-primary':isPrimary, 'btn-lg':isLg}">Vue 버튼</button>
+            <!-- 
+            	''(싱글따옴표)가 필요한 이유 : javascript에서 -는 연산자로 인식시키기 때문에 이를 해결하기 위해서는 ''로 감싸서 연산자로 인식못하도록 해줘야 한다.
+            	
+             -->
         <br>
         <label>
             파란색 버튼 <input type="checkbox" v-model="isPrimary">

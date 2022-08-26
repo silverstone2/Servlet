@@ -31,19 +31,19 @@
      	</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active" data-bs-interval="3000">
-				<img src="${pageContext.request.contextPath }/imgs/carousel1.jpg" height="550px" class="d-block w-100" alt="1번 슬라이드">
+				<img src="${pageContext.request.contextPath }/imgs/carousel1.jpg" height="650px" class="d-block w-100" alt="1번 슬라이드">
 			</div>
 	  		<div class="carousel-item" data-bs-interval="3000">
-				<img src="${pageContext.request.contextPath }/imgs/carousel2.jpg" height="550px" class="d-block w-100" alt="2번 슬라이드">
+				<img src="${pageContext.request.contextPath }/imgs/carousel2.jpg" height="650px" class="d-block w-100" alt="2번 슬라이드">
 			</div>
 	       <div class="carousel-item" data-bs-interval="3000">
-	         <img src="${pageContext.request.contextPath }/imgs/carousel3.jpg" height="550px" class="d-block w-100" alt="3번 슬라이드">
+	         <img src="${pageContext.request.contextPath }/imgs/carousel3.jpg" height="650px" class="d-block w-100" alt="3번 슬라이드">
 	       </div>
 	        <div class="carousel-item" data-bs-interval="3000">
-	         <img src="${pageContext.request.contextPath }/imgs/carousel4.jpg" height="550px" class="d-block w-100" alt="4번 슬라이드">
+	         <img src="${pageContext.request.contextPath }/imgs/carousel4.jpg" height="650px" class="d-block w-100" alt="4번 슬라이드">
 	       </div>
 	        <div class="carousel-item" data-bs-interval="3000">
-	         <img src="${pageContext.request.contextPath }/imgs/carousel5.jpg" height="550px" class="d-block w-100" alt="5번 슬라이드">
+	         <img src="${pageContext.request.contextPath }/imgs/carousel5.jpg" height="650px" class="d-block w-100" alt="5번 슬라이드">
 	       </div>
      	</div>
      <!-- 케러셀 좌우 버튼 -->

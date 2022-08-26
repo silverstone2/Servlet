@@ -31,7 +31,7 @@
                 }
             }
         });
-
+		// 자식 컴포넌트를 수동적으로 만든거는 재활용성을 염두해둔것이다. 어떤 부모 컴포넌트에서 사용할 수 있도록
         let app=new Vue({
             el:"#app",
             data:{
@@ -39,6 +39,7 @@
             },
             methods:{
                 deleteMember(index){
+                	// emembers 모델(배열) 에서 index 에 해당하는 아이템 1개 삭제
                     this.members.splice(index, 1);
                 }
             }
