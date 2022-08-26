@@ -13,6 +13,7 @@
             v-bind:list="members"
             v-on:delete="deleteMember"
             v-on:update="updateMember"></friend-component>
+            <!-- 위의 이벤트는 발생하지만 언제 발생할지는 모름 -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
@@ -34,7 +35,7 @@
                 updateItem(i){
                     const newName=prompt("수정할 이름을 입력하세요");
 
-                    //this.$emit("update", {i:i, newName:newName});
+                    //this.$emit("update", {i:i, newName:newName}); 아래의 코드와 같은 맥락임(object 작성법)
                     this.$emit("update", {i, newName});
                 }
             }
@@ -47,6 +48,7 @@
             },
             methods:{
                 deleteMember(index){
+                	// splice를 사용하면 모델의 방의 크기가 변경된 거기 때문에 변경이 감지가 된다.->ui가 자동 업데이트를 실시함.
                     this.members.splice(index, 1);
                 },
                 updateMember(data){
@@ -54,6 +56,7 @@
                     //this.members[data.i] = data.newName;
 
                     //아래의 2가지 방법중 하나로 배열을 변경해야 한다. 
+                    // this.$set이 UI를 업데이트하는 문법임.
                     //Vue.set(this.members, data.i, data.newName);
                     this.$set(this.members, data.i, data.newName);
                 }
