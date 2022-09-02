@@ -31,7 +31,7 @@
       				</c:when>
       				<c:otherwise>
 	      				<span class="navbar-text me-2">
-	      					<a href="${pageContext.request.contextPath}/user/private/info.jsp">${id }</a> Logging In...
+	      					<a href="${pageContext.request.contextPath}/user/member/list.jsp">${id }</a> Logging In...
 	      				</span>
 	      				<a class="btn btn-outline-danger btn-sm me-2" href="${pageContext.request.contextPath}/user/logout.jsp">Logout</a>
       				</c:otherwise>
